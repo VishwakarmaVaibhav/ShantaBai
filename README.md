@@ -35,7 +35,7 @@ Clone the Repository
 
 bash
 Copy code
-git clone https://github.com/yourusername/Shantabai.git
+git clone https://github.com/Vishwakarmavaibhav/Shantabai.git
 cd Shantabai
 Install Dependencies
 
@@ -47,7 +47,7 @@ Run the Application
 bash
 Copy code
 npm run dev
-The app should now be running locally. Open http://localhost:3000 to view it in your browser.
+The app should now be running locally. Open http://localhost:5173 to view it in your browser.
 
 Project Structure
 bash
