@@ -1,37 +1,21 @@
-// src/App.jsx
-import React, { useState, useEffect } from 'react';
-import LoadingSpinner from './Components/Loader'; // Import the
-import Navbar from './Components/Navbar';
-import HeroSection from './Components/Herosection';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Root from './Root';
+import Item from './Components/Item';
 
-function App() {
-  const [loading, setLoading] = useState(true); // State for loading
 
-  useEffect(() => {
-    // Simulate a delay for loading (e.g., data fetching)
-    setTimeout(() => {
-      setLoading(false); // Hide the loading spinner after the delay
-    }, 2000); // Adjust the delay as needed
-  }, []);
-
+const App = () => {
   return (
     <>
-    <div className=''>
-      {loading ? (
-        <div className='items-center justify-center bg-[#000000] text-white flex h-screenn '>
-        <LoadingSpinner /> 
-        </div>
-      ) : (
-        
-        <div className="">
-          <Navbar />
-          <HeroSection />
-        </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Root />} />
+          <Route path="/Item" element={<Item />} />
+          
 
-        
-        
-      )}
-    </div>
+          <Route path="*" element={<div>404 Not Found</div>} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
