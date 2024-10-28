@@ -72,7 +72,7 @@ const Navbar = () => {
       <header className="hidden md:flex items-center justify-between py-6 px-20 bg-gradient-to-b from-purple-700 to-[#000000] text-black">
         {/* Logo */}
         <div className="flex items-center mr-6">
-          <a href="/"><img src="/logo.jpg" alt="logo" className="h-8 mr-4" /></a> {/* Replace with your logo */}
+          <a href="/"><img src="/logo.png" alt="logo" className="h-8 mr-4" /></a> {/* Replace with your logo */}
           <div className="text-sm">
             <span className="font-semibold text-white">Delivery in 59 Mins!</span>
             <div className="flex items-center space-x-1 cursor-pointer" onClick={handleOverlayOpen}>

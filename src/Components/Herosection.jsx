@@ -70,7 +70,7 @@ const HeroSection = () => {
       </div>
 
       <div className='mt-20 py-10' id="love">
-        <img src="public/Loveshanta.jpg" alt="love ShantaBai" className='w-full h-full object-cover rounded-lg'/>
+        <img src="/Loveshanta.jpg" alt="love ShantaBai" className='w-full h-full object-cover rounded-lg'/>
       </div>
     </div>
 
