@@ -1,15 +1,42 @@
-import React from "react";
+import React , { useState, useEffect } from  "react";
 import styled from "styled-components";
 
 const Input = () => {
+
+  const words = ["hello", "new", "Maid", "Driver", "Baby"];
+  
+  const getRandomWord = () => words[Math.floor(Math.random() * words.length)];
+
+  const [randomWord, setRandomWord] = useState(getRandomWord());
+  const [isFading, setIsFading] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsFading(true);
+      setTimeout(() => {
+        setRandomWord(getRandomWord());
+        setIsFading(false);
+      }, 500); // Transition duration
+    }, 3000); // Change word every 1.5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const fadeStyles = {
+    transition: "opacity 0.5s ease-in-out, transform 0.5s ease-in-out",
+    opacity: isFading ? 0 : 1,
+    transform: isFading ? "translateY(5px)" : "translateY(0px)",
+  };
+
   return (
     <StyledWrapper>
       <form className="form">
         <label htmlFor="search">
-          <input
+          <input 
+          style={fadeStyles}
             required
             autoComplete="onn"
-            placeholder="search your chats"
+            placeholder ={randomWord} 
             id="search"
             type="text"
           />

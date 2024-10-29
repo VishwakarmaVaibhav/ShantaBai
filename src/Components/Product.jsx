@@ -1,5 +1,6 @@
 // Product.jsx
 import React from 'react';
+import { Router } from 'react-router-dom';
 import Item from './Item';
 
 const products = [
