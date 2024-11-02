@@ -2,6 +2,7 @@
 import React from 'react';
 import { Router } from 'react-router-dom';
 import Item from './Item';
+import { useNavigate } from 'react-router-dom';
 
 const products = [
     { 
@@ -79,6 +80,14 @@ const products = [
 
 
 const Product = () => {
+ 
+  const navigate = useNavigate();
+  const handleitem = () => {
+    
+    navigate('/Item');
+};
+
+
   return (
    
 
@@ -89,7 +98,7 @@ const Product = () => {
     <div className="relative inline-block  cursor-pointer mb-4 mr-4 max-w-[160px]" key={products.id} style={{ minWidth: '160px' }}>
       <a
         className="max-w-[160px] relative my-3 mb-9 group bg-white pb-2 min-w-[10rem] rounded-lg md:w-[9.5rem] !h-[20.75rem] sm:!h-[20.75rem] lg:!h-[20.75rem]"
-        href= "/Item"
+         onClick={handleitem}
       >
         <div className="relative rounded-xl bg-gray-200">
           <div className="overflow-hidden rounded-xl text-white border-[0.5px] border-gray-200">

@@ -3,7 +3,7 @@ import { Router } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 mt-10 px-6 py-10 text-gray-700">
+    <footer className="bg-gray-100  px-6 py-10 text-gray-700">
       <div className="container mx-auto">
         {/* Categories Section */}
         <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6 mb-10">
